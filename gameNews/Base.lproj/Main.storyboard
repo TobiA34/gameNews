@@ -297,12 +297,51 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1bn-M5-Rf3"/>
                         <segue destination="40D-1d-zrM" kind="relationship" relationship="viewControllers" id="vc5-iJ-PcZ"/>
                         <segue destination="PA4-Wo-UXt" kind="relationship" relationship="viewControllers" id="MFe-EK-T2v"/>
+                        <segue destination="wxI-n2-PPn" kind="relationship" relationship="viewControllers" id="3WL-Gp-fgV"/>
                         <segue destination="P88-FD-Etp" kind="relationship" relationship="viewControllers" id="R6w-pK-HPo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSO-NG-HWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-91.304347826086968" y="122.54464285714285"/>
+        </scene>
+        <!--Bookmark-->
+        <scene sceneID="Qai-CJ-yeT">
+            <objects>
+                <viewController id="wxI-n2-PPn" customClass="BookmarkViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZST-hD-VQC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRv-L7-4W0">
+                                <rect key="frame" x="0.0" y="269" width="414" height="544"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvf-LX-skW">
+                                <rect key="frame" x="126" y="107" width="163" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LLc-Mg-pEE" firstAttribute="bottom" secondItem="GRv-L7-4W0" secondAttribute="bottom" id="CW8-nj-Wcj"/>
+                            <constraint firstItem="Dvf-LX-skW" firstAttribute="top" secondItem="LLc-Mg-pEE" secondAttribute="top" constant="63" id="Hwb-ct-YWh"/>
+                            <constraint firstItem="LLc-Mg-pEE" firstAttribute="trailing" secondItem="Dvf-LX-skW" secondAttribute="trailing" constant="125" id="OYT-Bx-xtQ"/>
+                            <constraint firstItem="Dvf-LX-skW" firstAttribute="leading" secondItem="LLc-Mg-pEE" secondAttribute="leading" constant="126" id="dPw-hc-xb1"/>
+                            <constraint firstItem="GRv-L7-4W0" firstAttribute="leading" secondItem="LLc-Mg-pEE" secondAttribute="leading" id="eGW-Wc-aiX"/>
+                            <constraint firstItem="LLc-Mg-pEE" firstAttribute="trailing" secondItem="GRv-L7-4W0" secondAttribute="trailing" id="xJN-mB-ayT"/>
+                            <constraint firstItem="GRv-L7-4W0" firstAttribute="top" secondItem="LLc-Mg-pEE" secondAttribute="top" constant="225" id="yRR-j1-I6X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LLc-Mg-pEE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bookmark" image="bookmark" catalog="system" id="ytv-JK-uSe"/>
+                    <navigationItem key="navigationItem" id="ndQ-xS-BTP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZH-eF-eIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914.49275362318849" y="870.53571428571422"/>
         </scene>
         <!--Full Article View Controller-->
         <scene sceneID="lPy-PN-fm0">
@@ -424,6 +463,7 @@
     </scenes>
     <resources>
         <image name="GNewsLogo" width="195" height="70"/>
+        <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="edit" width="24" height="24"/>
         <image name="photo" width="24" height="24"/>
         <image name="review" width="24" height="24"/>

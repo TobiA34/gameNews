@@ -7,33 +7,36 @@
 //
 
 import UIKit
+import CoreData
+ 
 
 class ReviewViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     
     private let reviewRequest = ReviewRequest()
- 
+    private let reviewTableViewCell =  ReviewTableViewCell()
+    private let reviewDatabaseManager = ReviewDatabaseManager()
+    
     private var datasource: Array<ReviewItems> = [] {
         didSet{
             tableview.reloadData()
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         updateTableView()
         
     }
+ 
     
     func updateTableView(){
         getAllImgGallery()
         setupTableView()
     }
-    
-    
     
     
     func setupTableView(){
@@ -62,16 +65,19 @@ class ReviewViewController: UIViewController {
             // pass data to next view
         }
     }
+    
+    
+    
 }
 
- 
+
 
 extension ReviewViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let review = datasource[indexPath.row]
-      performSegue(withIdentifier: "fullReview", sender: review)
-
-     }
+        let review = datasource[indexPath.row]
+        performSegue(withIdentifier: "fullReview", sender: review)
+        
+    }
 }
 
 extension ReviewViewController: UITableViewDataSource{
@@ -81,10 +87,16 @@ extension ReviewViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let review = datasource[indexPath.row]
-         let cell = tableView.dequeueReusableCell(withIdentifier: ReviewTableViewCell.cellID, for: indexPath) as? ReviewTableViewCell
-         cell?.configure(with: review)
-         return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReviewTableViewCell.cellID, for: indexPath) as? ReviewTableViewCell
+        cell?.configure(with: review, delegate: self)
+        return cell!
     }
     
     
+}
+
+extension ReviewViewController: ReviewTableViewCellDelegate{
+    func didFavourite(_ cell: ReviewItems) {
+        reviewDatabaseManager.saveData(cell)
+    }
 }

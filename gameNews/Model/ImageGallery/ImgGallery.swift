@@ -10,9 +10,9 @@ import Foundation
 
 struct ImgGalleryItem: Decodable {
 //    let publish_date: Int
-    let image: Image
-    let title: String
-    let deck: String
+    var image: Image
+    var title: String
+    var deck: String
     
     
 }

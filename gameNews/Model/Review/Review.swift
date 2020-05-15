@@ -10,7 +10,7 @@ import Foundation
 
 struct ReviewItems: Decodable {
     
-     let title: String
+    var title: String
      let image: ReviewImage
     let score: String
     let deck: String
