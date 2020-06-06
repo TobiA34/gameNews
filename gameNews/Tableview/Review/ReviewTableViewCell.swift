@@ -46,7 +46,7 @@ class ReviewTableViewCell: UITableViewCell {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveLinear, animations: {
             self.starButton.transform = .init(scaleX: 1.2, y: 1.2)
         }) { _ in
-            UIView.animate(withDuration: 0.5, delay: 0.25, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.6, delay: 0.25, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveLinear, animations: {
                 self.starButton.transform = .identity
             })
         }
