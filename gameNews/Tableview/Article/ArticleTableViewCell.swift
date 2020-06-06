@@ -28,7 +28,7 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     
-    
+ 
     
     override func prepareForReuse() {
         super.prepareForReuse()

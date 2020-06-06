@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct ReviewItems: Decodable {
+struct ReviewItem: Decodable {
     
-     let title: String
+    var title: String
      let image: ReviewImage
     let score: String
     let deck: String
@@ -18,7 +18,7 @@ struct ReviewItems: Decodable {
 
 
 struct ReviewResults:Decodable {
-    var results: [ReviewItems]
+    var results: [ReviewItem]
 }
 
  struct ReviewImage:Decodable{

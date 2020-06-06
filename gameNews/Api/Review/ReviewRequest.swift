@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class ReviewRequest{
-    func getReview(completion: @escaping (Swift.Result<Array<ReviewItems>, Error>) -> ()) {
+    func getReview(completion: @escaping (Swift.Result<Array<ReviewItem>, Error>) -> ()) {
     Alamofire.request("http://www.gamespot.com/api/reviews/?api_key=1f4d669acd0602575bbe10c894a2b0ae91215a27&format=json").response { response in
             do {
                 guard let data = response.data else { return }

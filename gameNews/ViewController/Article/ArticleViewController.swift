@@ -24,6 +24,8 @@ class ArticleViewController: UIViewController {
  
     
     let articleTableviewCell = ArticleTableViewCell()
+    private let notifications = Notifications()
+
     
     private let apiRequest = ApiRequest()
 
@@ -37,6 +39,7 @@ class ArticleViewController: UIViewController {
         super.viewDidLoad()
 
         updateTableView()
+        notifications.setNotification()
  
     }
     

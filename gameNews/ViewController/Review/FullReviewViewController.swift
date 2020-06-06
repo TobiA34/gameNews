@@ -17,13 +17,13 @@ class FullReviewViewController: UIViewController {
     
     @IBOutlet weak var ratingsLbl: UILabel!
     
-    var review: ReviewItems?
+    var review: ReviewItem?
     
 
     func FullReview() {
         reviewTitleLbl.text = review?.title
         reviewParagraphLbl.text = review?.deck
-         reviewImg.kf.indicatorType = .activity
+        reviewImg.kf.indicatorType = .activity
         reviewImg.kf.setImage(with: URL(string: review?.image.original ?? ""))
         ratingsLbl.text =  review?.score
         

@@ -10,13 +10,13 @@
         <!--Article-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ArticleViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ArticleViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjj-wp-iPm">
-                                <rect key="frame" x="0.0" y="224" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="228" width="414" height="668"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,7 +36,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fjj-wp-iPm" secondAttribute="trailing" id="5A2-An-MsH"/>
                             <constraint firstItem="fjj-wp-iPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bgg-Ny-YU7"/>
-                            <constraint firstItem="fjj-wp-iPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="J94-T3-MvD"/>
+                            <constraint firstItem="fjj-wp-iPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="184" id="J94-T3-MvD"/>
                             <constraint firstItem="9yl-OO-tdy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PKe-Vy-wRd"/>
                             <constraint firstItem="9yl-OO-tdy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="aDQ-ba-BhV"/>
                             <constraint firstAttribute="bottom" secondItem="fjj-wp-iPm" secondAttribute="bottom" id="eZJ-MR-bDv"/>
@@ -57,7 +57,7 @@
         <!--Reviews-->
         <scene sceneID="60t-3A-6tb">
             <objects>
-                <viewController id="40D-1d-zrM" customClass="ReviewViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="40D-1d-zrM" customClass="ReviewViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2zF-HT-ube">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
         <!--settings-->
         <scene sceneID="x3c-w0-0Tp">
             <objects>
-                <viewController id="P88-FD-Etp" customClass="SettingsViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P88-FD-Etp" customClass="SettingsViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uV5-y2-RlP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +148,7 @@
         <!--Full Review View Controller-->
         <scene sceneID="SzO-aw-mqe">
             <objects>
-                <viewController id="5fq-NJ-i0J" customClass="FullReviewViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5fq-NJ-i0J" customClass="FullReviewViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjF-y6-z16">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,13 +240,13 @@
         <!--Image gallery-->
         <scene sceneID="C0z-ZO-bzS">
             <objects>
-                <viewController id="PA4-Wo-UXt" customClass="ImgGalleryViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PA4-Wo-UXt" customClass="ImgGalleryViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bD5-Az-ncE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhf-Mk-fJf">
-                                <rect key="frame" x="0.0" y="202" width="414" height="694"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -263,7 +263,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.21176470588235294" green="0.27058823529411763" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rhf-Mk-fJf" firstAttribute="top" secondItem="qko-2Z-tCd" secondAttribute="top" constant="158" id="CsX-Jp-U5m"/>
+                            <constraint firstItem="rhf-Mk-fJf" firstAttribute="top" secondItem="qko-2Z-tCd" secondAttribute="top" constant="183" id="CsX-Jp-U5m"/>
                             <constraint firstItem="ZFj-Vi-pMw" firstAttribute="leading" secondItem="qko-2Z-tCd" secondAttribute="leading" id="Max-c1-rMw"/>
                             <constraint firstItem="qko-2Z-tCd" firstAttribute="trailing" secondItem="rhf-Mk-fJf" secondAttribute="trailing" id="Rya-gl-vNg"/>
                             <constraint firstAttribute="bottom" secondItem="rhf-Mk-fJf" secondAttribute="bottom" id="l0h-2C-CS9"/>
@@ -297,6 +297,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1bn-M5-Rf3"/>
                         <segue destination="40D-1d-zrM" kind="relationship" relationship="viewControllers" id="vc5-iJ-PcZ"/>
                         <segue destination="PA4-Wo-UXt" kind="relationship" relationship="viewControllers" id="MFe-EK-T2v"/>
+                        <segue destination="wxI-n2-PPn" kind="relationship" relationship="viewControllers" id="3WL-Gp-fgV"/>
                         <segue destination="P88-FD-Etp" kind="relationship" relationship="viewControllers" id="R6w-pK-HPo"/>
                     </connections>
                 </tabBarController>
@@ -304,10 +305,55 @@
             </objects>
             <point key="canvasLocation" x="-91.304347826086968" y="122.54464285714285"/>
         </scene>
+        <!--Bookmark-->
+        <scene sceneID="Qai-CJ-yeT">
+            <objects>
+                <viewController id="wxI-n2-PPn" customClass="BookmarkViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZST-hD-VQC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRv-L7-4W0">
+                                <rect key="frame" x="0.0" y="269" width="414" height="544"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wxI-n2-PPn" id="4YP-Hh-KZJ"/>
+                                    <outlet property="delegate" destination="wxI-n2-PPn" id="qg9-WI-wMV"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvf-LX-skW">
+                                <rect key="frame" x="126" y="107" width="163" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LLc-Mg-pEE" firstAttribute="bottom" secondItem="GRv-L7-4W0" secondAttribute="bottom" id="CW8-nj-Wcj"/>
+                            <constraint firstItem="Dvf-LX-skW" firstAttribute="top" secondItem="LLc-Mg-pEE" secondAttribute="top" constant="63" id="Hwb-ct-YWh"/>
+                            <constraint firstItem="LLc-Mg-pEE" firstAttribute="trailing" secondItem="Dvf-LX-skW" secondAttribute="trailing" constant="125" id="OYT-Bx-xtQ"/>
+                            <constraint firstItem="Dvf-LX-skW" firstAttribute="leading" secondItem="LLc-Mg-pEE" secondAttribute="leading" constant="126" id="dPw-hc-xb1"/>
+                            <constraint firstItem="GRv-L7-4W0" firstAttribute="leading" secondItem="LLc-Mg-pEE" secondAttribute="leading" id="eGW-Wc-aiX"/>
+                            <constraint firstItem="LLc-Mg-pEE" firstAttribute="trailing" secondItem="GRv-L7-4W0" secondAttribute="trailing" id="xJN-mB-ayT"/>
+                            <constraint firstItem="GRv-L7-4W0" firstAttribute="top" secondItem="LLc-Mg-pEE" secondAttribute="top" constant="225" id="yRR-j1-I6X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LLc-Mg-pEE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bookmark" image="bookmark" catalog="system" id="ytv-JK-uSe"/>
+                    <navigationItem key="navigationItem" id="ndQ-xS-BTP"/>
+                    <connections>
+                        <outlet property="tableview" destination="GRv-L7-4W0" id="qKT-Wb-axj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZH-eF-eIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914.49275362318849" y="870.53571428571422"/>
+        </scene>
         <!--Full Article View Controller-->
         <scene sceneID="lPy-PN-fm0">
             <objects>
-                <viewController id="9C8-6o-kUU" customClass="FullArticleViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9C8-6o-kUU" customClass="FullArticleViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="grY-vr-R3e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,7 +418,7 @@
         <!--Full Img Gallery View Controller-->
         <scene sceneID="MF6-87-6yt">
             <objects>
-                <viewController id="gLx-6k-nZ2" customClass="FullImgGalleryViewController" customModule="gameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gLx-6k-nZ2" customClass="FullImgGalleryViewController" customModule="gameNewsV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ma-3P-fJU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,6 +470,7 @@
     </scenes>
     <resources>
         <image name="GNewsLogo" width="195" height="70"/>
+        <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="edit" width="24" height="24"/>
         <image name="photo" width="24" height="24"/>
         <image name="review" width="24" height="24"/>
