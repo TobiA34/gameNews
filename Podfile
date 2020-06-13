@@ -7,4 +7,5 @@ target 'gameNewsV2' do
   # Pods for gameNews
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'lottie-ios'
 end
