@@ -22,9 +22,11 @@ class ArticleTableViewCell: UITableViewCell {
     
     func configure(with article: ArticleItem){
         self.article = article
+        
           articleTitleLbl.text = article.title
         articleImageView.kf.indicatorType = .activity
         articleImageView.kf.setImage(with: URL(string: article.image.original ?? ""))
+        
     }
     
     

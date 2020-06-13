@@ -14,11 +14,17 @@ struct ReviewItem: Decodable {
      let image: ReviewImage
     let score: String
     let deck: String
+    let game: Game
+}
+
+struct Game: Decodable {
+    let site_detail_url: String?
 }
 
 
 struct ReviewResults:Decodable {
     var results: [ReviewItem]
+
 }
 
  struct ReviewImage:Decodable{

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F1CB24079AC5BD5C8C6EFABE888FAEB"
-               BuildableName = "Pods_gameNews.framework"
-               BlueprintName = "Pods-gameNews"
+               BlueprintIdentifier = "F7E2710148922D8DA8AA56D2732164BA"
+               BuildableName = "Pods_gameNewsV2.framework"
+               BlueprintName = "Pods-gameNewsV2"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

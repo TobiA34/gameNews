@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SafariServices
 
 
 class BookmarkViewController: UIViewController {
@@ -65,10 +66,11 @@ extension BookmarkViewController: UITableViewDataSource{
          
         
     }
-
-    
+ 
 }
 
 extension BookmarkViewController: UITableViewDelegate {
     
 }
+
+ 

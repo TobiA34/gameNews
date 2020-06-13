@@ -12,6 +12,8 @@ class ImgGalleryViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     private let imgGalleryRequest = ImgGalleryRequest()
+    
+    let myIndicator = UIActivityIndicatorView(style: .white)
 
     private var datasource: Array<ImgGalleryItem> = [] {
          didSet{
@@ -23,6 +25,17 @@ class ImgGalleryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         updateTableView()
+    }
+    
+    func loadIndicator(){
+        myIndicator.center = self.view.center
+        self.view.addSubview(myIndicator)
+        myIndicator.bringSubviewToFront(self.view)
+        myIndicator.startAnimating()
+    }
+    
+    func stopIndicator(){
+        myIndicator.stopAnimating()
     }
     
        func updateTableView(){
@@ -40,7 +53,8 @@ class ImgGalleryViewController: UIViewController {
        }
 
            func getAllImgGallery(){
-            imgGalleryRequest.getImgGallery { res in
+            self.loadIndicator()
+             imgGalleryRequest.getImgGallery { res in
                switch res{
                case.success(let imgGallery):
                    self.datasource = imgGallery
@@ -48,7 +62,8 @@ class ImgGalleryViewController: UIViewController {
                    print("Failed to show img gallery:",error)
                    
                }
-           }
+                self.stopIndicator()
+            }
        }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

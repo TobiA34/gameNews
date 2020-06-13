@@ -20,7 +20,7 @@ class ReviewDatabaseManager {
     }
     
     func save(item: ReviewItem){
-        
+        // check to see if an item exist then delete item else save item in coreData on the background thread.
         if doesExist(reviewItem: item) {
             delete(item: item)
         }
@@ -29,7 +29,7 @@ class ReviewDatabaseManager {
                 let review = Review(context: self.context)
                 
                 review.title = item.title
-                review.image = item.image.original
+                 review.image = item.image.original
                 
                 do {
                     try self.context.save()
@@ -44,20 +44,21 @@ class ReviewDatabaseManager {
     
     
     func getItem(with title: String) -> [Review] {
-        
+         //perform a query to get an item by its name
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
         fetchRequest.predicate = NSPredicate(format: "title == %@", title)
         return try! (context.fetch(fetchRequest) as? [Review] ?? [])
     }
     
     func doesExist(reviewItem: ReviewItem) -> Bool {
+        // This function checks to see if the item exist in the database
         return getItem(with: reviewItem.title).isEmpty == false
     }
     
     func delete(item: ReviewItem) {
-        
+        //When the user clicks to unbookmark the cell delete everything.
         let results = self.getItem(with: item.title)
-
+            
             for item in results {
                 
                 do {
@@ -71,6 +72,7 @@ class ReviewDatabaseManager {
     }
     
     func fetchAllData() -> [Review] {
+        // get everything in the entity named Review
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
         return try! context.fetch(fetchRequest) as? [Review] ?? []
     }

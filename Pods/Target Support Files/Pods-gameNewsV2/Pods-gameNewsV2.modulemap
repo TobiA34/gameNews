@@ -1,0 +1,6 @@
+framework module Pods_gameNewsV2 {
+  umbrella header "Pods-gameNewsV2-umbrella.h"
+
+  export *
+  module * { export * }
+}

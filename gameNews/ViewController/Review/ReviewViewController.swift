@@ -20,6 +20,8 @@ class ReviewViewController: UIViewController {
     private let reviewRequest = ReviewRequest()
     private let reviewTableViewCell =  ReviewTableViewCell()
     private var reviewDatabaseManager: ReviewDatabaseManager?
+    let myIndicator = UIActivityIndicatorView(style: .white)
+
  
     var review: Review?
 
@@ -38,11 +40,19 @@ class ReviewViewController: UIViewController {
         }
         updateTableView()
         
-        
-        
-        
      }
  
+    func loadIndicator(){
+        myIndicator.center = self.view.center
+        self.view.addSubview(myIndicator)
+        myIndicator.bringSubviewToFront(self.view)
+        myIndicator.startAnimating()
+    }
+    
+    func stopIndicator(){
+        myIndicator.stopAnimating()
+    }
+    
     
     
     
@@ -60,7 +70,7 @@ class ReviewViewController: UIViewController {
     }
     
     func getAllImgGallery(){
-        
+        self.loadIndicator()
         reviewRequest.getReview { res in
             switch res{
             case.success(let review):
@@ -69,6 +79,7 @@ class ReviewViewController: UIViewController {
                 print("Failed to show review:",error)
                 
             }
+            self.stopIndicator()
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
