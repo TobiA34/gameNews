@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pfn-UE-r2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pfn-UE-r2v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,17 +31,6 @@
                                     <constraint firstAttribute="height" constant="128" id="368-zH-v38"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Dq-he-cHe">
-                                <rect key="frame" x="142" y="226" width="131" height="32"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmented:" destination="1va-05-hMr" eventType="valueChanged" id="Zk2-Vk-top"/>
-                                    <action selector="toggleDarkMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="alD-GF-hSd"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -49,24 +38,19 @@
                             <constraint firstItem="fjj-wp-iPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bgg-Ny-YU7"/>
                             <constraint firstItem="fjj-wp-iPm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="258" id="J94-T3-MvD"/>
                             <constraint firstItem="9yl-OO-tdy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PKe-Vy-wRd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Dq-he-cHe" secondAttribute="trailing" constant="141" id="a5I-Az-DGj"/>
                             <constraint firstItem="9yl-OO-tdy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="aDQ-ba-BhV"/>
                             <constraint firstAttribute="bottom" secondItem="fjj-wp-iPm" secondAttribute="bottom" id="eZJ-MR-bDv"/>
-                            <constraint firstItem="4Dq-he-cHe" firstAttribute="top" secondItem="9yl-OO-tdy" secondAttribute="bottom" constant="49" id="wFQ-HW-yQ5"/>
-                            <constraint firstItem="4Dq-he-cHe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="ysl-gr-Q9B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9yl-OO-tdy" secondAttribute="trailing" id="zOd-h6-Qeg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Article" image="edit" id="nyN-ol-DkU"/>
                     <connections>
-                        <outlet property="segmentedControl" destination="4Dq-he-cHe" id="I0e-yN-ubJ"/>
                         <outlet property="tableview" destination="fjj-wp-iPm" id="JVa-hm-EZH"/>
                         <segue destination="9C8-6o-kUU" kind="show" identifier="fullArticle" id="6Ok-hT-zIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="1va-05-hMr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="122.54464285714285"/>
         </scene>
@@ -302,7 +286,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="sja-7Q-WC4">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pfn-UE-r2v" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainvc" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pfn-UE-r2v" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="22V-3X-Xq1">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -486,7 +470,7 @@
     </scenes>
     <resources>
         <image name="GNewsLogo" width="195" height="70"/>
-        <image name="bookmark" catalog="system" width="56" height="64"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="edit" width="24" height="24"/>
         <image name="photo" width="24" height="24"/>
         <image name="review" width="24" height="24"/>

@@ -76,6 +76,9 @@ class ReviewViewController: UIViewController {
             case.success(let review):
                 self.datasource = review
             case.failure(let error):
+                let ac = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(ac,animated: true)
                 print("Failed to show review:",error)
                 
             }

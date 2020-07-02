@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2A170724AE149B0008FFF9 /* onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2A170624AE149B0008FFF9 /* onboarding.storyboard */; };
+		BD2A170D24AE15810008FFF9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A170C24AE15810008FFF9 /* OnboardingViewController.swift */; };
+		BD2A171224AE15B90008FFF9 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A171024AE15B90008FFF9 /* OnboardingCollectionViewCell.swift */; };
+		BD2A171324AE15B90008FFF9 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2A171124AE15B90008FFF9 /* OnboardingCollectionViewCell.xib */; };
+		BD2A171624AE16E60008FFF9 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A171524AE16E60008FFF9 /* Screens.swift */; };
+		BD2A171B24AE1C7E0008FFF9 /* photo-gallery.json in Resources */ = {isa = PBXBuildFile; fileRef = BD2A171824AE1C7D0008FFF9 /* photo-gallery.json */; };
+		BD2A171C24AE1C7E0008FFF9 /* review-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = BD2A171924AE1C7E0008FFF9 /* review-animation.json */; };
+		BD2A171D24AE1C7E0008FFF9 /* newspaper-spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = BD2A171A24AE1C7E0008FFF9 /* newspaper-spinner.json */; };
 		BD620CCD0FFAEB5962F9F049 /* Pods_gameNewsV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD6F198C506B2C929AD55C4 /* Pods_gameNewsV2.framework */; };
 		BD7A1A382455B88700FB2435 /* ReviewDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A1A372455B88700FB2435 /* ReviewDatabaseManager.swift */; };
 		BD7A1A3B2455B90E00FB2435 /* gameNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD7A1A392455B90E00FB2435 /* gameNews.xcdatamodeld */; };
@@ -45,6 +53,14 @@
 		101CABF5ED9C47EE34CA3C25 /* Pods-gameNewsV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gameNewsV2.release.xcconfig"; path = "Target Support Files/Pods-gameNewsV2/Pods-gameNewsV2.release.xcconfig"; sourceTree = "<group>"; };
 		451A70C867514260CD7A56BA /* Pods-gameNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gameNews.release.xcconfig"; path = "Target Support Files/Pods-gameNews/Pods-gameNews.release.xcconfig"; sourceTree = "<group>"; };
 		AFD6F198C506B2C929AD55C4 /* Pods_gameNewsV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gameNewsV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2A170624AE149B0008FFF9 /* onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboarding.storyboard; sourceTree = "<group>"; };
+		BD2A170C24AE15810008FFF9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		BD2A171024AE15B90008FFF9 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD2A171124AE15B90008FFF9 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD2A171524AE16E60008FFF9 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		BD2A171824AE1C7D0008FFF9 /* photo-gallery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "photo-gallery.json"; sourceTree = "<group>"; };
+		BD2A171924AE1C7E0008FFF9 /* review-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "review-animation.json"; sourceTree = "<group>"; };
+		BD2A171A24AE1C7E0008FFF9 /* newspaper-spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "newspaper-spinner.json"; sourceTree = "<group>"; };
 		BD7A1A372455B88700FB2435 /* ReviewDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDatabaseManager.swift; sourceTree = "<group>"; };
 		BD7A1A3A2455B90E00FB2435 /* gameNews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gameNews.xcdatamodel; sourceTree = "<group>"; };
 		BD7A1A4B2455C63D00FB2435 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +117,41 @@
 				101CABF5ED9C47EE34CA3C25 /* Pods-gameNewsV2.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD2A170A24AE15200008FFF9 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				BD2A171024AE15B90008FFF9 /* OnboardingCollectionViewCell.swift */,
+				BD2A171124AE15B90008FFF9 /* OnboardingCollectionViewCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		BD2A170B24AE15620008FFF9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BD2A170C24AE15810008FFF9 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BD2A171424AE16C70008FFF9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BD2A171524AE16E60008FFF9 /* Screens.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BD2A171724AE1C650008FFF9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				BD2A171A24AE1C7E0008FFF9 /* newspaper-spinner.json */,
+				BD2A171824AE1C7D0008FFF9 /* photo-gallery.json */,
+				BD2A171924AE1C7E0008FFF9 /* review-animation.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		BD7A1A362455B85D00FB2435 /* DatabaseManager */ = {
@@ -259,6 +310,8 @@
 		BDD91EF524364FFB00B847B5 /* gameNews */ = {
 			isa = PBXGroup;
 			children = (
+				BD2A171724AE1C650008FFF9 /* Animations */,
+				BD2A170A24AE15200008FFF9 /* CollectionView */,
 				BDE67E152471C11600B78325 /* Notification */,
 				BD7A1A362455B85D00FB2435 /* DatabaseManager */,
 				BDD91F152436509200B847B5 /* Api */,
@@ -268,6 +321,7 @@
 				BDD91EFC24364FFB00B847B5 /* Main.storyboard */,
 				BDD91EF624364FFB00B847B5 /* AppDelegate.swift */,
 				BDD91EF824364FFB00B847B5 /* SceneDelegate.swift */,
+				BD2A170624AE149B0008FFF9 /* onboarding.storyboard */,
 				BDD91EFF24364FFB00B847B5 /* Assets.xcassets */,
 				BDD91F0124364FFB00B847B5 /* LaunchScreen.storyboard */,
 				BDD91F0424364FFB00B847B5 /* Info.plist */,
@@ -279,6 +333,7 @@
 		BDD91F0A2436501900B847B5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BD2A170B24AE15620008FFF9 /* Onboarding */,
 				BD7A1A4A2455C60C00FB2435 /* Bookmark */,
 				BDA78E642445D55E007D06B5 /* Settings */,
 				BDA5F1DE243E0B52008C738F /* ImageGallery */,
@@ -291,6 +346,7 @@
 		BDD91F0D2436503900B847B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD2A171424AE16C70008FFF9 /* Screens */,
 				BDA5F1DF243E0B60008C738F /* ImageGallery */,
 				BDA5F1D92437E29A008C738F /* Review */,
 				BDA5F1D22437E269008C738F /* Article */,
@@ -397,11 +453,16 @@
 			files = (
 				BDA5F1E3243E0B8E008C738F /* ImageGalleryTableViewCell.xib in Resources */,
 				BDD91F112436505900B847B5 /* ArticleTableViewCell.xib in Resources */,
+				BD2A171C24AE1C7E0008FFF9 /* review-animation.json in Resources */,
+				BD2A171D24AE1C7E0008FFF9 /* newspaper-spinner.json in Resources */,
 				BDD91F0324364FFB00B847B5 /* LaunchScreen.storyboard in Resources */,
+				BD2A171324AE15B90008FFF9 /* OnboardingCollectionViewCell.xib in Resources */,
 				BDD91F0024364FFB00B847B5 /* Assets.xcassets in Resources */,
 				BDA5F1D72437E28F008C738F /* ReviewTableViewCell.xib in Resources */,
 				BDD91EFE24364FFB00B847B5 /* Main.storyboard in Resources */,
 				BD7A1A512455C67400FB2435 /* BookmarkTableViewCell.xib in Resources */,
+				BD2A170724AE149B0008FFF9 /* onboarding.storyboard in Resources */,
+				BD2A171B24AE1C7E0008FFF9 /* photo-gallery.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,13 +527,16 @@
 				BDA5F1EB243E4E61008C738F /* ImgGalleryViewController.swift in Sources */,
 				BD7A1A4C2455C63D00FB2435 /* BookmarkViewController.swift in Sources */,
 				BDD91F142436507C00B847B5 /* ApiRequest.swift in Sources */,
+				BD2A171224AE15B90008FFF9 /* OnboardingCollectionViewCell.swift in Sources */,
 				BDA5F1E2243E0B8E008C738F /* ImageGalleryTableViewCell.swift in Sources */,
+				BD2A171624AE16E60008FFF9 /* Screens.swift in Sources */,
 				BDF48A79243FD261004C0CAB /* ReviewRequest.swift in Sources */,
 				BDA5F1E9243E4CA9008C738F /* ImgGallery.swift in Sources */,
 				BD7A1A502455C67400FB2435 /* BookmarkTableViewCell.swift in Sources */,
 				BDA5F1ED243E4EC3008C738F /* ImgGalleryRequest.swift in Sources */,
 				BDD91EFB24364FFB00B847B5 /* ArticleViewController.swift in Sources */,
 				BDA78E5F2444E02E007D06B5 /* FullReviewViewController.swift in Sources */,
+				BD2A170D24AE15810008FFF9 /* OnboardingViewController.swift in Sources */,
 				BDE67E172471C13400B78325 /* Notifications.swift in Sources */,
 				BDD91EF724364FFB00B847B5 /* AppDelegate.swift in Sources */,
 				BDD91EF924364FFB00B847B5 /* SceneDelegate.swift in Sources */,

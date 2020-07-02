@@ -12,12 +12,9 @@ import UIKit
 class ArticleViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     let myIndicator = UIActivityIndicatorView(style: .white)
 
-    
-    
+ 
     let articleTableviewCell = ArticleTableViewCell()
      private let notifications = Notifications()
     private let apiRequest = ApiRequest()
@@ -37,6 +34,7 @@ class ArticleViewController: UIViewController {
         updateTableView()
         notifications.setNotification()
         
+  
     }
      
     
@@ -81,18 +79,7 @@ class ArticleViewController: UIViewController {
         }
     }
     
-    @IBAction func toggleDarkMode(_ sender: Any) {
-        
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            // TODO: Light mode
-            break
-         case 1:
-            // TODO: Dark mode
-            break
-        default: break
-        }
-    }
+ 
     
     
     
@@ -136,8 +123,7 @@ extension ArticleViewController: UITableViewDataSource{
     
 }
 
-
-
+ 
 
 
 
