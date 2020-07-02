@@ -16,6 +16,7 @@ class FullArticleViewController: UIViewController {
     @IBOutlet weak var articleParagraphLbl: UILabel!
     
     @IBOutlet weak var htmlLoad: WKWebView!
+    
     var article: ArticleItem?
     
     func configureFullArticle(){
