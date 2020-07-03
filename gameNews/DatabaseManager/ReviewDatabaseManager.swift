@@ -29,8 +29,7 @@ class ReviewDatabaseManager {
                 let review = Review(context: self.context)
                 
                 review.title = item.title
-                 review.image = item.image.original
-                
+
                 do {
                     try self.context.save()
                     print("Data saved")

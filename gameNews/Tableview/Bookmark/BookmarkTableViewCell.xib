@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,33 +17,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-LR-evr">
-                        <rect key="frame" x="15" y="70" width="373" height="20.5"/>
+                        <rect key="frame" x="10" y="26" width="383" height="165"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGo-DK-nyB">
-                        <rect key="frame" x="100" y="130.5" width="203" height="50.5"/>
-                        <state key="normal" title="See full Review"/>
-                        <connections>
-                            <action selector="fullArticleBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KzU-dI-aXX"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="IGo-DK-nyB" secondAttribute="trailing" constant="100" id="9st-nN-9HA"/>
-                    <constraint firstItem="IGo-DK-nyB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="JQu-Gt-rUu"/>
-                    <constraint firstItem="IGo-DK-nyB" firstAttribute="top" secondItem="zNB-LR-evr" secondAttribute="bottom" constant="40" id="RMw-tL-ud3"/>
-                    <constraint firstAttribute="bottom" secondItem="IGo-DK-nyB" secondAttribute="bottom" constant="30" id="ZlO-7F-iKw"/>
-                    <constraint firstItem="zNB-LR-evr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="edN-eb-kcu"/>
-                    <constraint firstItem="zNB-LR-evr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="70" id="iha-Zb-slt"/>
-                    <constraint firstAttribute="trailing" secondItem="zNB-LR-evr" secondAttribute="trailing" constant="15" id="jUb-SI-d9p"/>
+                    <constraint firstItem="zNB-LR-evr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="8Ow-Pi-uLG"/>
+                    <constraint firstAttribute="bottom" secondItem="zNB-LR-evr" secondAttribute="bottom" constant="20" id="BoV-cq-Ui2"/>
+                    <constraint firstAttribute="trailing" secondItem="zNB-LR-evr" secondAttribute="trailing" constant="10" id="Vwt-jc-EEt"/>
+                    <constraint firstItem="zNB-LR-evr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="YZ1-f0-UcN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bookmarkTitle" destination="zNB-LR-evr" id="ufL-Op-IxY"/>
-                <outlet property="fullArticle" destination="IGo-DK-nyB" id="Y9w-Z6-h3V"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="159.70982142857142"/>
         </tableViewCell>
