@@ -21,7 +21,7 @@ class ReviewViewController: UIViewController {
     private let reviewTableViewCell =  ReviewTableViewCell()
     private var reviewDatabaseManager: ReviewDatabaseManager?
     let myIndicator = UIActivityIndicatorView(style: .white)
-
+    private let fullReview = "fullReview"
  
     var review: Review?
 
@@ -66,7 +66,7 @@ class ReviewViewController: UIViewController {
         tableview.tableFooterView = UIView()
         tableview.rowHeight = UITableView.automaticDimension
         tableview.estimatedRowHeight = 128
-        tableview.register(UINib(nibName: "ReviewTableViewCell" ,bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.cellID)
+        tableview.register(UINib(nibName: ReviewTableViewCell.cellID ,bundle: nil), forCellReuseIdentifier: ReviewTableViewCell.cellID)
     }
     
     func getAllImgGallery(){
@@ -76,7 +76,7 @@ class ReviewViewController: UIViewController {
             case.success(let review):
                 self.datasource = review
             case.failure(let error):
-                let ac = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .alert)
+                let ac = UIAlertController(title: "Failed to load api", message: nil, preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(ac,animated: true)
                 print("Failed to show review:",error)
@@ -86,7 +86,7 @@ class ReviewViewController: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "fullReview") {
+        if (segue.identifier == fullReview) {
             let vc = segue.destination as! FullReviewViewController
             vc.review = sender as? ReviewItem
             // pass data to next view
@@ -102,7 +102,7 @@ class ReviewViewController: UIViewController {
 extension ReviewViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let review = datasource[indexPath.row]
-        performSegue(withIdentifier: "fullReview", sender: review)
+        performSegue(withIdentifier: fullReview, sender: review)
         
     }
 }

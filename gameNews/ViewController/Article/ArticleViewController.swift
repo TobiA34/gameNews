@@ -18,6 +18,7 @@ class ArticleViewController: UIViewController {
     let articleTableviewCell = ArticleTableViewCell()
      private let notifications = Notifications()
     private let apiRequest = ApiRequest()
+    private let fullArticle = "fullArticle"
     
     private var datasource: Array<ArticleItem> = [] {
         didSet{
@@ -60,7 +61,7 @@ class ArticleViewController: UIViewController {
         tableview.tableFooterView = UIView()
         tableview.rowHeight = UITableView.automaticDimension
         tableview.estimatedRowHeight = 128
-        tableview.register(UINib(nibName: "ArticleTableViewCell" ,bundle: nil), forCellReuseIdentifier: ArticleTableViewCell.cellID)
+        tableview.register(UINib(nibName: ArticleTableViewCell.cellID ,bundle: nil), forCellReuseIdentifier: ArticleTableViewCell.cellID)
         
     }
     
@@ -72,6 +73,9 @@ class ArticleViewController: UIViewController {
             case.success(let article):
                 self.datasource = article
             case.failure(let error):
+                let ac = UIAlertController(title: "Failed to load api", message: nil, preferredStyle: .alert)
+                          ac.addAction(UIAlertAction(title: "OK", style: .default))
+                          self.present(ac,animated: true)
                 print("Failed to show article:",error)
                 
             }
@@ -84,7 +88,7 @@ class ArticleViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "fullArticle") {
+        if (segue.identifier == fullArticle) {
             let vc = segue.destination as! FullArticleViewController
             vc.article = sender as? ArticleItem
             // pass data to next view
@@ -96,7 +100,7 @@ class ArticleViewController: UIViewController {
 extension ArticleViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = datasource[indexPath.row]
-        performSegue(withIdentifier: "fullArticle", sender: article)
+        performSegue(withIdentifier: fullArticle, sender: article)
         
     }
 }

@@ -29,6 +29,10 @@ class ReviewDatabaseManager {
                 let review = Review(context: self.context)
                 
                 review.title = item.title
+                review.image = item.image.original
+                review.deck = item.deck
+                review.score = item.score
+                review.url = item.game.site_detail_url
 
                 do {
                     try self.context.save()

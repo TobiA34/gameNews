@@ -13,8 +13,8 @@ import Kingfisher
 
 class BookmarkTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var fullArticle: UIButton!
-    
+ 
+    @IBOutlet weak var bookmarkedImage: UIImageView!
     @IBOutlet weak var bookmarkTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,15 +30,13 @@ class BookmarkTableViewCell: UITableViewCell {
     func configureBookmark(with bookmark: Review){
         bookmarkTitle.text = bookmark.title
 
-//        bookmarkImage.kf.indicatorType = .activity
-//        bookmarkImage.kf.setImage(with: URL(string: bookmark.image  ?? ""))
+         
+        bookmarkedImage.kf.indicatorType = .activity
+        bookmarkedImage.kf.setImage(with: URL(string: bookmark.image  ?? ""))
     }
     
     
-    @IBAction func fullArticleBtn(_ sender: Any) {
-        
-    
-    }
+ 
     
     
 }

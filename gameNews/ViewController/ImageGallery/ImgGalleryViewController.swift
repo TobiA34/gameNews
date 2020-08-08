@@ -14,6 +14,8 @@ class ImgGalleryViewController: UIViewController {
     private let imgGalleryRequest = ImgGalleryRequest()
     
     let myIndicator = UIActivityIndicatorView(style: .white)
+    
+    let fullImgGallery = "fullImgGallery"
 
     private var datasource: Array<ImgGalleryItem> = [] {
          didSet{
@@ -49,7 +51,7 @@ class ImgGalleryViewController: UIViewController {
            tableview.tableFooterView = UIView()
                 tableview.rowHeight = UITableView.automaticDimension
                 tableview.estimatedRowHeight = 128
-                tableview.register(UINib(nibName: "ImageGalleryTableViewCell" ,bundle: nil), forCellReuseIdentifier: ImageGalleryTableViewCell.cellID)
+        tableview.register(UINib(nibName: ImageGalleryTableViewCell.cellID ,bundle: nil), forCellReuseIdentifier: ImageGalleryTableViewCell.cellID)
        }
 
            func getAllImgGallery(){
@@ -59,6 +61,9 @@ class ImgGalleryViewController: UIViewController {
                case.success(let imgGallery):
                    self.datasource = imgGallery
                case.failure(let error):
+                let ac = UIAlertController(title: "Failed to load api", message: nil, preferredStyle: .alert)
+                          ac.addAction(UIAlertAction(title: "OK", style: .default))
+                          self.present(ac,animated: true)
                    print("Failed to show img gallery:",error)
                    
                }
@@ -67,7 +72,7 @@ class ImgGalleryViewController: UIViewController {
        }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "fullImgGallery") {
+        if (segue.identifier == fullImgGallery) {
             let vc = segue.destination as! FullImgGalleryViewController
             vc.imageGallerys = sender as? ImgGalleryItem
             // pass data to next view
@@ -79,7 +84,7 @@ class ImgGalleryViewController: UIViewController {
 extension ImgGalleryViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let imgGallery = datasource[indexPath.row]
-      performSegue(withIdentifier: "fullImgGallery", sender: imgGallery)
+      performSegue(withIdentifier: fullImgGallery, sender: imgGallery)
 
      }
 }
